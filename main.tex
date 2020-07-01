@@ -1,0 +1,54 @@
+\documentclass[11pt,dvipdfmx,b5paper,oneside]{jsbook}
+
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{here}
+\usepackage{framed}
+\usepackage{tcolorbox}
+\usepackage{quotchap}
+\usepackage{pdfpages}
+\usepackage[hidelinks]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{titlesec}
+\usepackage{picture}
+\usepackage{tikz}
+
+\tcbuselibrary{breakable}
+\definecolor{shadecolor}{gray}{0.80}
+
+% section
+\titleformat{\section}[block]{}{}{0pt}
+{
+  \definecolor{teal}{gray}{0.30}
+  \begin{picture}(0,0)
+    \put(-10,-5){
+      \begin{tikzpicture}
+        \fill[teal] (0pt,0pt) rectangle (5pt,19pt);
+      \end{tikzpicture}
+    }
+    \put(-10,-5){
+      \color{teal}
+      \line(1,0){\hsize}
+    }
+  \end{picture}
+  \hspace{0pt}
+  \sf \Large \thesection
+  \hspace{0pt}
+}
+
+% 図表見出し
+\renewcommand{\tablename}{\textcolor{gray}{▼} 表}
+\renewcommand{\figurename}{\textcolor{gray}{▲} 図}
+
+%タイトル
+\title{「お気持ち」で“完全に理解”する\\電子回路入門}
+\author{DBU若手回路図勉強会}
+\date{2020/7/31}
+
+
+\begin{document}
+\maketitle
+
+\include{IM2704}
+
+\end{document}
